@@ -1,2 +1,7 @@
 # -desarrollo_web_Nicolas_Valencia
 CC5002
+Mi proyecto de página para el registro de aves se llama CoAviario, tiene como logo a Condorito y la plantee como una propuesta de ayuda comunitaria para generar un aviario virtual donde se pudieran registrar los avistamientos a lo largo de todo chile.
+Para la página opté por dividirla en dos, donde por un lado un usuario puede registrarse como voluntario e informar del avistamiento y en el otro puede consultar los avistamientos hechos. 
+Dentro de la categoría de registros solicité al voluntario su nombre, correo, rut, región y comuna para localizar de donde nos están llegando los aportes y poder localizar a la persona de ser necesario. Dentro de estos campos se solicita que el nombre tenga por lo menos un largo de 3 caracteres, que el correo tenga un formato definido (sin contar guiones en la direccion), que el rut se identifique sín puntos y con el digito verificador, como tambien un largo mínimo para la opcion de pasaporte. 
+Para el registro de las aves se pide el nombre y tipo de esta, la localidad del avistamiento (donde se usa el mismo metodo anterior de la region y comuna), la fecha y hora de avistamiento, y algún registro fotográfico (ya sea imagen o video). Para el nombre y tipo de ave las restricciones son las mismas que para el nombre en el item anterior, y para la fecha no se permite registrar avistamientos en fechas futuras.
+Para el listado se generaron 4 registros de avistamientos manualmente para poder filtrarlos ya que todavia no se pueden guardar datos ingresados por el formulario.

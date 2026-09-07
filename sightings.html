@@ -1,0 +1,51 @@
+<!-- listado.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Avistamientos</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Listado de Avistamientos</h1>
+
+    <div class="controles">
+        <label for="filtro-tipo">Filtrar por tipo de ave:</label>
+        <select id="filtro-tipo">
+            <option value="">Todos</option>
+        </select>
+
+        <label for="orden">Ordenar por:</label>
+        <select id="orden">
+            <option value="fecha-asc">Fecha (más antigua primero)</option>
+            <option value="fecha-desc">Fecha (más reciente primero)</option>
+            <option value="lugar-asc">Lugar (A-Z)</option>
+            <option value="lugar-desc">Lugar (Z-A)</option>
+        </select>
+    </div>
+
+    <table id="tabla-avistamientos">
+        <thead>
+            <tr>
+                <th>Ave</th>
+                <th>Tipo</th>
+                <th>Lugar</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-body">
+            <!-- Se llena con JS -->
+        </tbody>
+    </table>
+
+    <div class="paginacion">
+        <button id="btn-anterior">Anterior</button>
+        <span id="pagina-actual">Página 1</span>
+        <button id="btn-siguiente">Siguiente</button>
+    </div>
+
+    <button onclick="window.location.href='index.html'">Volver al inicio</button>
+
+    <script src="./listing.js"></script>
+</body>
+</html>

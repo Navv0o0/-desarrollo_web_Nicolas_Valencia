@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div id="val-box" hidden> <!--Creo q esto es para que flagee en rojo si puso algo mal/no puso lo que se requiere-->
+            <h2 id="val-msg"></h2>
+            <ul id="val-list"></ul>
+        </div>
+        <div class="logo">
+            <img id="logo-condorito" src="./condorito.jpg" alt="Condorito, mascota oficial CoAviario">
+            <p id="bajada">Inscribete como voluntari@ para registrar tu avistamiento!</p>
+        </div>
+
+        <form class="form" id="registration-form" name="myForm" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre</label>
+            <input type="nombre" name="nombre" placeholder="Elvis Tek" id="nombre" minlength="4" required><br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="nicolas@correo.com" id="email" minlength="16" required><br>
+
+            <label for="phone">Número de Teléfono (Chileno)</label>
+            <input type="text" name="phone" placeholder="+569xxxxxxx" id="phone" minlength="8" required><br>
+            
+            <label for="rut">Rut o Pasaporte</label>
+            <input type="text" name="rut" placeholder="xxxxxxx-x" id="rut-id" required><br> 
+
+            <label for="select-region">Región</label>
+            <select name="select-region" id="select-region"> <!--AGREGARLE EL REQUIRED PQ SE LO QUITE-->
+                <option value="">Seleccione una región</option>
+            </select><br>
+
+            <label for="select-comuna">Comuna</label>
+            <select name="select-comuna" id="select-comuna">
+                <option value="">Seleccione una Comuna</option>
+            </select><br>
+            
+            <button id="submit-bttn" type="submit">Enviar</button>
+        </form>
+        <div id="validation-box" class="form hidden">
+            <h2>Gracias por ser voluntari@!</h2>
+            <button id="input2-bttn">Registrar avistamiento</button>
+            <button id="start-bttn">Volver al inicio</button>
+        </div>
+
+        <form class="form hidden" id="sighting-form" name="myform2" method="post" enctype="multipart/form-data" >
+
+            <label for="nombre">Nombre del Ave</label>
+            <input type="text" name="nombre-ave" placeholder="Churrete Costero" id="nombre-ave" minlength="5" required><br>
+
+            <label for="nombre">Tipo del Ave</label>
+            <input type="text" name="tipo" id="tipo-ave" placeholder="Ave de Presa" minlength="5" required><br>
+
+            <label for="select-region-avistamiento">Región del avistamiento</label>
+            <select name="select-region-avistamiento" id="select-region-avistamiento">
+                <option value="">Seleccione una región</option>
+            </select><br>
+
+            <label for="select-comuna-avistemiento">Comuna del avistamiento</label>
+            <select nale="select-comuna-avistamiento" id="select-comuna-avistamiento">
+                <option value="">Seleccione una Comuna</option>
+            </select><br>
+
+            <label for="nombre">Fecha Avistamiento</label> 
+            <input type="date" name="fecha" id="fecha-avistamiento" minlength="6" required><br>
+            
+            <label for="nombre">Hora del Avistamiento</label>
+            <input type="time" name="hora" id="hora-avistamiento" minlength="2" required><br>
+
+            <label for="files">Registro fotográfico</label>
+            <input type="file" name="files" id="files" multiple accept="image/*,video/*" required><br>
+
+            <button type="submit" id="confirm-bttn">Confirmar Avistamiento</button>
+
+        </form>
+        
+
+    </div>
+    <script src="./validations.js"></script>
+    <script src="./main.js"></script>
+    <script src="./select.js"></script>
+    
+</body>
+</html>
