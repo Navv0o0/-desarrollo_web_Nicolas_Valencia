@@ -1,0 +1,57 @@
+<!-- 
+INSTRUCCIONES
+1) Registro de voluntario solicitando datos
+2)los voluntarios registrados puedan informar avistamientos, incluyendo el
+tipo y nombre de ave, lugar, fecha y hora del avistamiento y además se debe exigir
+agregar al menos un registro en foto o vídeo.
+3)consultar listados de avistamientos, que permita filtrar por tipo de ave y
+ordenamiento por diversos datos (fecha de avistamiento, lugar), presentando la
+información por páginas
+4) consulta de indicadores y métricas (gráficos) sobre voluntarios registrados y
+avistamientos registrados.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CoAviario</title> <!--el nombre de mi pagina-->
+    <!--Aca poner el link de mi CSS-->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="main-page">
+        <!--aca puedo poder un cuadro que salga cuando el usuario no ingresó todo/ingreso mal-->
+        <h1>Bienvenid@!</h1>
+        <p>CoAviario es una iniciativa que tiene como objetivo llevar un registro de avistamiento de aves
+            chilenas para regular el cambio en su población debido a los recientes fenómenos climáticos. 
+            Instríbete como voluntari@ para ayudarnos a mantener con vida la fauna chilena, 
+            registrando tus avistamientos de nuestras especies nativas. Gracias por ser parte!
+        </p>
+        <div class="img-container">
+            <div class="image">
+                <img id="bird_img" src="./churrete_costero.jpg" alt="churrete costero(Cinclodes nigrofumosus), ave endémica chilena"> 
+            </div>
+        <div class="image">
+            <img src="./tapaculo.jpg" alt="tapaculo (Scelorchilus albicollis), ave endémica chilena">
+        </div>
+
+        <div class="image">
+            <img src="./rara_chilena.jpg" atl="rara (Phytotoma rara), ave nativa chilena">
+        </div>
+        </div>
+
+        <div class="buttons">
+            <!--<button id="login" class="register-btn" type="button">Registrarme como voluntari@</button>-->
+            <a href="register.html" class="register-bttn" type="button">Registrarme como voluntari@</a>
+            <a href="sightings.html" class="search-bttn" type="button">Ver listado de avistamientos</a>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>
+
+<!--
+<button onclick="window.location.href='listado.html'">Ver listado de avistamientos</button>
+-->
